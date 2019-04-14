@@ -18,7 +18,7 @@ This folder contains the script used to format the raw data obtained from laser 
 
 Usage: 
 
-`python format_data.py <path_to_data_folder>`
+`python3 format_data.py <path_to_data_folder> <x_step_size> <y_step_size>`
 
 2. Matlab-scripts
 
