@@ -6,13 +6,13 @@ import sys
 def input_validation(input_args):
     """
     Validates input arguments
-    :param input_args: list of arguments of type: ['format_data.py', 'path_to_data_folder', 'x_step', 'y_step']
+    :param input_args: list of arguments of type: ['format_icpms_map_data.py', 'path_to_data_folder', 'x_step', 'y_step']
     :return: False if not valid, else True is returned
     """
     # Determine if number of arguments are correct
     if len(input_args) != 4:
         print("Invalid number of arguments. Usage:")
-        print("format_data.py <path_to_data_folder> <x_step_size> <y_step_size")
+        print("format_icpms_map_data.py <path_to_data_folder> <x_step_size> <y_step_size")
         return False
 
     # Determine if step sizes provided are valid
@@ -142,40 +142,40 @@ def create_element_matrices(df):
             W.write("{}\n".format(','.join(values_list)))
 
 
-# Main script
-valid_input = input_validation(input_args=sys.argv)
+if __name__ == '__main__':
+    valid_input = input_validation(input_args=sys.argv)
 
-if not valid_input:
-    sys.exit()
-else:
-    # Store input arguments into variables
-    x_step_size = float(sys.argv[2])
-    y_step_size = float(sys.argv[3])
-    work_path = os.path.abspath(sys.argv[1])
-    if not os.path.isdir(os.path.join(work_path, 'output')):
-        os.mkdir(os.path.join(work_path, 'output'))
-    print('Processing data in: {}'.format(work_path))
-    print('Step size in x direction: {}'.format(str(x_step_size)))
-    print('Step size in y direction: {}'.format(str(y_step_size)))
+    if not valid_input:
+        sys.exit()
+    else:
+        # Store input arguments into variables
+        x_step_size = float(sys.argv[2])
+        y_step_size = float(sys.argv[3])
+        work_path = os.path.abspath(sys.argv[1])
+        if not os.path.isdir(os.path.join(work_path, 'output')):
+            os.mkdir(os.path.join(work_path, 'output'))
+        print('Processing data in: {}'.format(work_path))
+        print('Step size in x direction: {}'.format(str(x_step_size)))
+        print('Step size in y direction: {}'.format(str(y_step_size)))
 
-    # Find all csv files in folder, sort by the numerical component and store in list with their full path
-    # https://stackoverflow.com/questions/9234560/find-all-csv-files-in-a-directory-using-python/12280052
-    # https://stackoverflow.com/questions/37796598/how-to-sort-file-names-in-a-particular-order-using-python
-    filenames = os.listdir(work_path)
-    file_list = [filename for filename in filenames if filename.endswith(".csv")]
-    textfiles = sorted(file_list, key=numeric_filename)
-    textfiles = [os.path.join(work_path, textfile) for textfile in textfiles]
+        # Find all csv files in folder, sort by the numerical component and store in list with their full path
+        # https://stackoverflow.com/questions/9234560/find-all-csv-files-in-a-directory-using-python/12280052
+        # https://stackoverflow.com/questions/37796598/how-to-sort-file-names-in-a-particular-order-using-python
+        filenames = os.listdir(work_path)
+        file_list = [filename for filename in filenames if filename.endswith(".csv")]
+        textfiles = sorted(file_list, key=numeric_filename)
+        textfiles = [os.path.join(work_path, textfile) for textfile in textfiles]
 
-    # Determine elements measured
-    elements = element_determination(textfiles[0])
+        # Determine elements measured
+        elements = element_determination(textfiles[0])
 
-    # Create one file to store all results
-    outfile = os.path.join(work_path, 'output/alldata.csv')
-    write_all_results(output_path=outfile, file_list=textfiles, element_list=elements,
-                      x_step=x_step_size, y_step=y_step_size)
+        # Create one file to store all results
+        outfile = os.path.join(work_path, 'output/alldata.csv')
+        write_all_results(output_path=outfile, file_list=textfiles, element_list=elements,
+                          x_step=x_step_size, y_step=y_step_size)
 
-    # Parse results file to create individual matrix files
-    df = pd.read_csv(outfile, sep=',')
-    for element in elements:
-        df_element = df[['x', 'y', element]]
-        create_element_matrices(df=df_element)
+        # Parse results file to create individual matrix files
+        df = pd.read_csv(outfile, sep=',')
+        for element in elements:
+            df_element = df[['x', 'y', element]]
+            create_element_matrices(df=df_element)
