@@ -12,7 +12,7 @@ setuptools.setup(
     packages=setuptools.find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
-    entry_pionts={'console_scripts': ['format_icpms_map_data = format_icpms_map_data:main']},
+    entry_points={'console_scripts': ['format_icpms_map_data = format_icpms_map_data:main']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: Free for non-commercial use  ",
