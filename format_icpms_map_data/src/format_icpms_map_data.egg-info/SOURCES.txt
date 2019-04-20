@@ -1,0 +1,5 @@
+setup.py
+src/format_icpms_map_data.egg-info/PKG-INFO
+src/format_icpms_map_data.egg-info/SOURCES.txt
+src/format_icpms_map_data.egg-info/dependency_links.txt
+src/format_icpms_map_data.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: format-icpms-map-data
+Version: 1.0.0
+Summary: Tool to format LA-ICP-MS data
+Home-page: https://github.com/davidkuter/ICP-MS/tree/master/
+Author: David Kuter
+Author-email: david.kuter@gmail.com
+License: UNKNOWN
+Description: Formats LA-ICP-MS csv files into separate elemental matrix files for 2D contour plotting
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use  
+Classifier: Operating System :: Unix  

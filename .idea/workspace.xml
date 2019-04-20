@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f2611ee-ba6f-474f-ba33-8ad00e1c1e8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/formatdata/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formatdata/format_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/formatdata/format_icpms_map_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/format_icpms_map_data/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_map_data/format_icpms_map_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_map_data/src/format_icpms_map_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_map_data/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_map_data/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,23 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formatdata/format_icpms_map_data.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/format_icpms_map_data/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="176" column="52" selection-start-line="176" selection-start-column="52" selection-end-line="176" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/formatdata/setup.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_icpms_map_data/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="68">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -59,6 +58,8 @@
         <option value="$PROJECT_DIR$/formatdata/format_data.py" />
         <option value="$PROJECT_DIR$/formatdata/format_icpms_map_data.py" />
         <option value="$PROJECT_DIR$/formatdata/setup.py" />
+        <option value="$PROJECT_DIR$/format_icpms_map_data/setup.py" />
+        <option value="$PROJECT_DIR$/format_icpms_map_data/requirements.txt" />
       </list>
     </option>
   </component>
@@ -86,7 +87,13 @@
             <path>
               <item name="ICP-MS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICP-MS" type="462c0819:PsiDirectoryNode" />
-              <item name="formatdata" type="462c0819:PsiDirectoryNode" />
+              <item name="format_icpms_map_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ICP-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ICP-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="format_icpms_map_data" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -107,6 +114,11 @@
         <option name="myModuleName" value="ICP-MS" />
       </console-settings>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Data\Coding\ICP-MS\format_icpms_map_data\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -175,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555283100087</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Renamed parent dir">
+      <created>1555717535595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555717535595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -190,7 +209,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17833553" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17833553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -201,7 +220,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993395" weight="0.26874116" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4993395" visible="true" weight="0.26874116" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4993395" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -213,7 +232,8 @@
     <MESSAGE value="Major update. Script can now automatically determine the number of elements of interest. Added example data and renamed script to 'format_data.py'" />
     <MESSAGE value="Changed readme and removed sortcsv.sh" />
     <MESSAGE value="Added requirement for x and y stepsize to be specified in input arguments. Better handled input validation. Changed readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added requirement for x and y stepsize to be specified in input arguments. Better handled input validation. Changed readme" />
+    <MESSAGE value="Renamed parent dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed parent dir" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.ssh/id_rsa.pub">
@@ -223,9 +243,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formatdata/sortcsv.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/formatdata/sortcsv.sh" />
     <entry file="file://$PROJECT_DIR$/formatdata/example_data/femur_head/002SMPL.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -241,7 +259,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/formatdata/format_icpms_map_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
+        <state relative-caret-position="2958">
           <caret line="176" column="52" selection-start-line="176" selection-start-column="52" selection-end-line="176" selection-end-column="52" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -252,7 +270,21 @@
     <entry file="file://$PROJECT_DIR$/formatdata/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_icpms_map_data/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_icpms_map_data/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
