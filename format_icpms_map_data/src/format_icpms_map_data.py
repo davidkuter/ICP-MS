@@ -66,14 +66,15 @@ def element_determination(sample_file):
     return element_header.strip().split(',')[1:]
 
 
-def write_all_results(output_path, file_list, element_list, x_step, y_step):
+def write_all_results(output_path, file_list, element_list, x_step, y_step, work_path):
     """
     Writes results from all csv files into a single summary file
     :param output_path: str, full path to output file that is to be created
     :param file_list: list, list of files (full path) to extract data from
     :param element_list: list, list of elements (only needed for header creation)
     :param x_step: float, step size in x direction
-    :param y-step: float, step size in y direction
+    :param y_step: float, step size in y direction
+    :param work_path: str, path to working directory
     :return: results csv file, x and y csv file
     """
     x_file_path = os.path.join(work_path, 'output/x_data.csv')
@@ -116,7 +117,7 @@ def write_all_results(output_path, file_list, element_list, x_step, y_step):
         gy.write('\n'.join(y_list))
 
 
-def create_element_matrices(df):
+def create_element_matrices(df, work_path):
     """
     Reads dataframe consisting of x & y positions and element counts. Reformats data into matrix format.
     :param df: dataframe
@@ -142,7 +143,7 @@ def create_element_matrices(df):
             W.write("{}\n".format(','.join(values_list)))
 
 
-if __name__ == '__main__':
+def main():
     valid_input = input_validation(input_args=sys.argv)
 
     if not valid_input:
@@ -172,10 +173,14 @@ if __name__ == '__main__':
         # Create one file to store all results
         outfile = os.path.join(work_path, 'output/alldata.csv')
         write_all_results(output_path=outfile, file_list=textfiles, element_list=elements,
-                          x_step=x_step_size, y_step=y_step_size)
+                          x_step=x_step_size, y_step=y_step_size, work_path=work_path)
 
         # Parse results file to create individual matrix files
         df = pd.read_csv(outfile, sep=',')
         for element in elements:
             df_element = df[['x', 'y', element]]
-            create_element_matrices(df=df_element)
+            create_element_matrices(df=df_element, work_path=work_path)
+
+
+if __name__ == '__main__':
+    main()
