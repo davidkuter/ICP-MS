@@ -12,7 +12,7 @@ def input_validation(input_args):
     # Determine if number of arguments are correct
     if len(input_args) != 4:
         print("Invalid number of arguments. Usage:")
-        print("format_icpms_map_data.py <path_to_data_folder> <x_step_size> <y_step_size")
+        print("format_icpms_map_data.py <path_to_data_folder> <x_step_size> <y_step_size>")
         return False
 
     # Determine if step sizes provided are valid
