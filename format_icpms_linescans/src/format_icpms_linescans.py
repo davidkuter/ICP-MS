@@ -132,9 +132,9 @@ def calculate_average(values_list, outlier_index):
             values_list.pop(int(index))
 
     # Calculate average and standard deviation
-    numericCounts = [float(i) for i in values_list]
-    ave = numpy.mean(numericCounts)
-    std = numpy.std(numericCounts)
+    numeric_counts = [float(i) for i in values_list]
+    ave = numpy.mean(numeric_counts)
+    std = numpy.std(numeric_counts)
 
     return ave, std
 
