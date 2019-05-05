@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="format_icpms_map_data",
-    version="1.0.0",
+    version="1.0.1",
     author="David Kuter",
     author_email="david.kuter@gmail.com",
     description="Tool to format LA-ICP-MS data",
