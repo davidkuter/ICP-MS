@@ -1,6 +1,7 @@
 import numpy
 import pandas as pd
 import os
+from scipy import stats
 import sys
 
 
@@ -116,24 +117,41 @@ def write_all_results(df, working_dir, elements):
         print('    Data for {} written to {}'.format(symbol, output_file))
 
 
-def aveOnly(counts):
-    del counts[0]
-    numericCounts = [float(i) for i in counts]
+def calculate_average(values_list, outlier_index):
+    """
+    Calculates average and standard deviation taking into account outliers (based on z-score calculation)
+    :param values_list: list, List of element counts
+    :param outlier_index: list, List of indexes of outlying values that must not be used in the average calculation
+    :return: (float, float), Average and standard deviation
+    """
 
+    # Remove outliers from list
+    if len(outlier_index) != 0:
+        outlier_index = sorted(outlier_index, reverse=True)
+        for index in outlier_index:
+            values_list.pop(int(index))
+
+    # Calculate average and standard deviation
+    numericCounts = [float(i) for i in values_list]
     ave = numpy.mean(numericCounts)
+    std = numpy.std(numericCounts)
 
-    return ave
+    return ave, std
 
 
-def aveStd(counts):
-    ave = numpy.mean(counts)
-    std = numpy.std(counts)
+def calculate_stats(working_dir, elements):
 
-    b = []
-    b.append(ave)
-    b.append(std)
-
-    return b
+    with open(os.path.join(working_dir, 'average.csv'), 'w') as w:
+        w.write('Element,Line,Average,StdDev,Outliers\n')
+        for element in elements:
+            symbol = ''.join([char for char in element if not char.isdigit()])
+            df = pd.read_csv(os.path.join(working_dir, symbol + '_matrix.csv'), sep=',')
+            cols = list(df)
+            for col in cols[1:]:
+                z = numpy.abs(stats.zscore(df[col]))
+                outliers = numpy.where(z > 3)[0]
+                ave, std = calculate_average(df[col].tolist(), outliers)
+                w.write('{},{},{},{},{}\n'.format(element, col, ave, std, len(outliers)))
 
 
 def main():
@@ -145,7 +163,8 @@ def main():
         work_path = os.path.abspath(sys.argv[1])
 
         # Determine spotsize folders
-        for spotsize in os.walk(work_path):
+        sub_directories = [x[1] for x in os.walk(work_path)]
+        for spotsize in sub_directories[0]:
             spotsize_path = os.path.join(work_path, spotsize)
             print("Formating results in folder: {}".format(spotsize_path))
             out_path = os.path.join(spotsize_path, 'output')
@@ -162,10 +181,14 @@ def main():
             print("    Determining elements")
             elements = element_determination(sorted_csv_files[0])
 
-            # Write data into new format
+            # Write element data into separate files
             print("    Writing results to separate element files")
             results_df = store_data_in_df(sorted_csv_files)
             write_all_results(results_df, out_path, elements)
+
+            # Determining statistics
+            print("    Determining statistics")
+            calculate_stats(out_path, elements)
 
             sys.exit()
 
