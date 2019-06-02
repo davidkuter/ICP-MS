@@ -190,10 +190,13 @@ def main():
     else:
         work_path = os.path.abspath(sys.argv[1])
 
+    # Determines sample sub-folders
+    dir_structure = [x[1] for x in os.walk(work_path)]
+    for parent_dir in dir_structure[0]:
+        current_dir = os.path.join(work_path, parent_dir)
         # Determine spotsize folders
-        sub_directories = [x[1] for x in os.walk(work_path)]
-        for spotsize in sub_directories[0]:
-            spotsize_path = os.path.join(work_path, spotsize)
+        for spotsize in dir_structure[1]:
+            spotsize_path = os.path.join(current_dir, spotsize)
             print("Formating results in folder: {}".format(spotsize_path))
             out_path = os.path.join(spotsize_path, 'output')
             if not os.path.isdir(out_path):
