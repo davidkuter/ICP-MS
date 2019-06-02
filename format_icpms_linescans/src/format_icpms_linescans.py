@@ -117,9 +117,23 @@ def write_all_results(df, working_dir, elements):
         print('    Data for {} written to {}'.format(symbol, output_file))
 
 
+def calc_mod_zscore(values_list):
+    """
+    Calculates modified Z-score
+    (see https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm)
+    :param values_list: list, values to calculate the modified Z-score for
+    :return: list, Modified Z-scores
+    """
+    median = numpy.median(values_list)
+    abs_dev = [abs(value - median) for value in values_list]
+    median_abs_dev = numpy.median(abs_dev)
+    return [0.6745*(value - median)/median_abs_dev for value in values_list]
+
+
 def calculate_average(values_list, outlier_index):
     """
-    Calculates average and standard deviation taking into account outliers (based on z-score calculation)
+    Calculates average and standard deviation taking into account outliers (based on modified z-score calculation).
+    Cutoff of 3.5 is used
     :param values_list: list, List of element counts
     :param outlier_index: list, List of indexes of outlying values that must not be used in the average calculation
     :return: (float, float), Average and standard deviation
@@ -152,15 +166,20 @@ def calculate_stats(working_dir, elements):
             symbol = ''.join([char for char in element if not char.isdigit()])
             df = pd.read_csv(os.path.join(working_dir, symbol + '_matrix.csv'), sep=',')
             cols = list(df)
+            element_stats = []
             for col in cols[1:]:
                 # Determines z-score of data points per line
-                z = numpy.abs(stats.zscore(df[col]))
-                # Lists values that have a z-score of > 3
-                outliers = numpy.where(z > 3)[0]
+                z_scores = calc_mod_zscore(df[col])
+                # Lists values that have a z-score of > 3.5
+                outliers = [x[0] for x in enumerate(z_scores) if x[1] > 3.5]
                 # Calculates ave and stdev of non-outlier data per line
                 ave, std = calculate_average(df[col].tolist(), outliers)
+                element_stats.append(ave)
                 # Writes data to file
                 w.write('{},{},{},{},{}\n'.format(element, col, ave, std, len(outliers)))
+            total_ave = numpy.mean(element_stats)
+            total_std = numpy.std(element_stats)
+            w.write('{},{},{},{}\n'.format(element, 'Total', total_ave, total_std))
 
 
 def main():

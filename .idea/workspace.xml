@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f2611ee-ba6f-474f-ba33-8ad00e1c1e8f" name="Default Changelist" comment="Removed scripts field and">
+    <list default="true" id="2f2611ee-ba6f-474f-ba33-8ad00e1c1e8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/format_icpms_map_data/src/format_icpms_map_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_map_data/src/format_icpms_map_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/15uM/output/W_matrix2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/15uM/output/average.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/15uM/output/average.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/Ca_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/Ca_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/Fe_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/Fe_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/S_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/S_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/W_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/W_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/Zn_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/Zn_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/average.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/4uM/output/average.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/Ca_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/Ca_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/Fe_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/Fe_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/S_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/S_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/W_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/W_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/Zn_matrix.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/Zn_matrix.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/average.csv" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/example_data/sample_A/50uM/output/average.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format_icpms_linescans/src/format_icpms_linescans.py" beforeDir="false" afterPath="$PROJECT_DIR$/format_icpms_linescans/src/format_icpms_linescans.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,14 +27,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/format_icpms_map_data/src/format_icpms_map_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1656">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="2210">
+              <caret line="132" column="19" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/format_icpms_linescans/src/format_icpms_linescans.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="191" selection-start-line="191" selection-end-line="191" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_icpms_linescans/src/format_ref-data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -38,7 +73,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dk_April2019_update" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -46,13 +81,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/formatdata/plotdata.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/formatdata/format_data.py" />
         <option value="$PROJECT_DIR$/formatdata/format_icpms_map_data.py" />
         <option value="$PROJECT_DIR$/formatdata/setup.py" />
         <option value="$PROJECT_DIR$/format_icpms_map_data/requirements.txt" />
-        <option value="$PROJECT_DIR$/format_icpms_map_data/setup.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/format_icpms_map_data/src/format_icpms_map_data.py" />
+        <option value="$PROJECT_DIR$/format_icpms_linescans/requirements.txt" />
+        <option value="$PROJECT_DIR$/format_icpms_linescans/setup.py" />
+        <option value="$PROJECT_DIR$/format_icpms_map_data/setup.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/format_icpms_linescans/src/format_icpms_linescans.py" />
       </list>
     </option>
   </component>
@@ -70,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -80,24 +120,23 @@
             <path>
               <item name="ICP-MS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICP-MS" type="462c0819:PsiDirectoryNode" />
-              <item name="format_icpms_map_data" type="462c0819:PsiDirectoryNode" />
+              <item name="format_icpms_linescans" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ICP-MS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICP-MS" type="462c0819:PsiDirectoryNode" />
-              <item name="format_icpms_map_data" type="462c0819:PsiDirectoryNode" />
+              <item name="format_icpms_linescans" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/format_icpms_linescans" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -109,6 +148,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Data\Coding\ICP-MS\format_icpms_linescans" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Data\Coding\ICP-MS\format_icpms_map_data\src" />
     </key>
@@ -208,7 +250,56 @@
       <option name="project" value="LOCAL" />
       <updated>1555720696583</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed improper calling of main script. Had to add work_path variables to some definitions">
+      <created>1555721106988</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555721106988</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed typo in input error handling. Updated Readme with installation instructions">
+      <created>1555721889407</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555721889407</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added gitignore file to ignore pycharm's idea folder">
+      <created>1555772040281</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555772040281</updated>
+    </task>
+    <task id="LOCAL-00011" summary="set up folders to update format_icpms_linescans">
+      <created>1555772330517</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555772330517</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added example data. Code can create element matrix files. Just need to handle the averages and incoporate Cassidy's histogram requests">
+      <created>1557003101979</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557003101979</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added outlier tests and calculations for ave and stdev">
+      <created>1557022805213</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1557022805213</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added install scripts. Minor changes to variable names">
+      <created>1557086916809</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1557086916809</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -221,9 +312,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17833553" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1780822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -234,9 +325,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4993395" visible="true" weight="0.26874116" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4993395" visible="true" weight="0.26868907" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4993395" weight="0.32956153" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4993395" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -250,7 +341,14 @@
     <MESSAGE value="Added scripts field to setup.py" />
     <MESSAGE value="fixed typo in entry points file in setup.py" />
     <MESSAGE value="Removed scripts field and rebuilt wheel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed scripts field and rebuilt wheel" />
+    <MESSAGE value="Fixed improper calling of main script. Had to add work_path variables to some definitions" />
+    <MESSAGE value="Fixed typo in input error handling. Updated Readme with installation instructions" />
+    <MESSAGE value="added gitignore file to ignore pycharm's idea folder" />
+    <MESSAGE value="set up folders to update format_icpms_linescans" />
+    <MESSAGE value="Added example data. Code can create element matrix files. Just need to handle the averages and incoporate Cassidy's histogram requests" />
+    <MESSAGE value="Added outlier tests and calculations for ave and stdev" />
+    <MESSAGE value="Added install scripts. Minor changes to variable names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added install scripts. Minor changes to variable names" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.ssh/id_rsa.pub">
@@ -260,33 +358,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formatdata/example_data/femur_head/002SMPL.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="337">
-            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/formatdata/format_icpms_map_data.py">
+    <entry file="file://$PROJECT_DIR$/formatdata/example_data/femur_head/002SMPL.csv" />
+    <entry file="file://$PROJECT_DIR$/formatdata/format_icpms_map_data.py" />
+    <entry file="file://$PROJECT_DIR$/formatdata/setup.py" />
+    <entry file="file://$PROJECT_DIR$/formatdata/plotdata.py" />
+    <entry file="file://$PROJECT_DIR$/formatdata/sortcsv.sh" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2958">
-          <caret line="176" column="52" selection-start-line="176" selection-start-column="52" selection-end-line="176" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/formatdata/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -297,32 +377,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formatdata/plotdata.py">
+    <entry file="file://$PROJECT_DIR$/format_icpms_linescans/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-          <folding>
-            <element signature="e#505#520#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formatdata/sortcsv.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/format_icpms_map_data/setup.py">
+    <entry file="file://$PROJECT_DIR$/format_icpms_linescans/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/format_icpms_map_data/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="918">
+            <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/format_icpms_map_data/src/format_icpms_map_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1656">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="2210">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_icpms_linescans/src/format_ref-data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_icpms_linescans/src/format_icpms_linescans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
