@@ -1,8 +1,9 @@
 import numpy
 import pandas as pd
 import os
-from scipy import stats
 import sys
+
+from loguru import logger
 
 
 def input_validation(input_args):
@@ -13,13 +14,13 @@ def input_validation(input_args):
     """
     # Determine if number of arguments are correct
     if len(input_args) != 2:
-        print("Invalid number of arguments. Usage:")
-        print("format_icpms_linescans <path_to_data_folder>")
+        logger.critical("Invalid number of arguments. Usage:")
+        logger.critical("format_icpms_linescans <path_to_data_folder>")
         return False
 
     # Determine if directory specified exists
     if not os.path.isdir(input_args[1]):
-        print('Directory "{}" does not exist'.format(input_args[1]))
+        logger.critical(f'Directory "{input_args[1]}" does not exist')
         return False
 
     return True
@@ -100,8 +101,13 @@ def write_all_results(df, working_dir, elements):
         filename = symbol + '_matrix'
         output_file = os.path.join(working_dir, filename + '.csv')
 
-        df_element = df['Time [Sec]'].to_frame()
+        # Set up dataframe to store results in. Select times for only the first line to prevent weird duplicates
+        df_element = df[['Time [Sec]', 'line']]
+        df_element = df_element.astype({'line': 'int32'})
+        df_element = df_element[df_element.line == 1]
+        df_element.drop(columns=['line'], inplace=True)
 
+        # Grab element values and merge into matrix (time vs line# per element)
         for line in linescans:
             # Grab data from each linescan separately for a specific element
             df_matrix = df[element][(df['line'] == str(line))].to_frame()
@@ -109,12 +115,11 @@ def write_all_results(df, working_dir, elements):
             df_matrix.rename(columns={element: new_col}, inplace=True)
             # Create matrix of linescans (columns) vs time
             df_element = df_element.join(df_matrix)
-            df_element.drop_duplicates(subset=df_element.columns.difference(['Time [Sec]']), inplace=True)
             del df_matrix
 
         # write data to file
         df_element.to_csv(output_file, sep=',', index=False)
-        print('    Data for {} written to {}'.format(symbol, output_file))
+        logger.info(f'    Data for {symbol} written to {output_file}')
 
 
 def calc_mod_zscore(values_list):
@@ -197,28 +202,28 @@ def main():
         # Determine spotsize folders
         for spotsize in dir_structure[1]:
             spotsize_path = os.path.join(current_dir, spotsize)
-            print("Formating results in folder: {}".format(spotsize_path))
+            logger.info(f"Formating results in folder: {spotsize_path}")
             out_path = os.path.join(spotsize_path, 'output')
             if not os.path.isdir(out_path):
                 os.mkdir(out_path)
 
             # Determines csv files with the spotsize folder
-            print("    Sorting csv files numerically")
+            logger.info("    Sorting csv files numerically")
             csv_files = [csv_file for csv_file in os.listdir(spotsize_path) if csv_file.endswith(".csv")]
             sorted_csv_files = sorted(csv_files, key=numeric_filename)
             sorted_csv_files = [os.path.join(spotsize_path, text_file) for text_file in sorted_csv_files]
 
             # Determine elements measured
-            print("    Determining elements")
+            logger.info("    Determining elements")
             elements = element_determination(sorted_csv_files[0])
 
             # Write element data into separate files
-            print("    Writing results to separate element files")
+            logger.info("    Writing results to separate element files")
             results_df = store_data_in_df(sorted_csv_files)
             write_all_results(results_df, out_path, elements)
 
             # Determining statistics
-            print("    Determining statistics")
+            logger.info("    Determining statistics")
             calculate_stats(out_path, elements)
 
 
